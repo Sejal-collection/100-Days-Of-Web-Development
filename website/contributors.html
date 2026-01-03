@@ -4,25 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects | 100 Days of Code</title>
+    <title>Contributors | 100 Days of Web</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-    <nav class="navbar">
 
+    <nav class="navbar">
         <div class="container nav-content">
             <div class="logo">
                 <span>100</span> Days of Web
             </div>
             <ul class="nav-links">
                 <li><a href="../index.html">Home</a></li>
-                <li><a href="#" class="active">Projects</a></li>
+                <li><a href="projects.html">Projects</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="contributors.html">Contributors</a></li>
+                <li><a href="#" class="active">Contributors</a></li>
                 <li><a href="structure.html">Structure</a></li>
             </ul>
             <button id="themeToggle" class="theme-toggle" aria-label="Toggle Theme">
@@ -34,38 +36,37 @@
                 </svg>
             </button>
         </div>
-
-        <div class="logo">DevChallenge 🚀</div>
-        <ul class="nav-links">
-            <li><a href="/index.html" class="active">Home</a></li>
-            <li><a href="/website/projects.html">Projects</a></li>
-            <li><a href="/website/showcase.html">Contributors Projects</a></li>
-            <li><a href="/website/contribute.html">Contribute</a></li>
-            <li><a href="/website/structure.html">Structure</a></li>
-        </ul>
-
     </nav>
 
     <main class="container">
-        <header class="hero" style="padding: 4rem 0 2rem;">
-            <h1>Project Compendium</h1>
-            <p>A searchable archive of all 100 web development projects.</p>
-
+        <header class="hero">
+            <h1>Hall of Fame</h1>
+            <p>The amazing developers who have contributed code, fixed bugs, and improved this journey.</p>
             <div class="search-container" style="margin: 2rem auto 0;">
                 <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <circle cx="11" cy="11" r="8" />
                     <line x1="21" y1="21" x2="16.65" y2="16.65" />
                 </svg>
-                <input type="text" id="projectSearch" class="search-input"
-                    placeholder="Search by title, day, or tech...">
+                <input type="text" id="contributorSearch" class="search-input" placeholder="Search contributors...">
             </div>
         </header>
 
-        <section class="container">
-            <h2 style="margin-bottom: 2rem; color: var(--text-primary); font-size: 1.5rem;">All Projects</h2>
-            <div id="projects-grid" class="projects-grid">
+        <section>
+            <div id="contributors-grid" class="contributors-grid">
                 <!-- Injected by script.js -->
+            </div>
+        </section>
+
+        <section style="margin-top: 6rem; text-align: center;">
+            <div
+                style="background: var(--bg-card); padding: 3rem; border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
+                <h2>Want to Contribute?</h2>
+                <p style="color: var(--text-secondary); margin: 1rem 0 2rem;">
+                    This project is open source. Fork the repo, add your project or fix a bug, and send a PR!
+                </p>
+                <a href="https://github.com/Shubham-cyber-prog/100-days-of-web-development/blob/main/CONTRIBUTING.md"
+                    target="_blank" class="btn btn-primary">Read Guidelines</a>
             </div>
         </section>
     </main>
@@ -119,9 +120,9 @@
                 <h4>Quick Links</h4>
                 <ul class="footer-links">
                     <li><a href="../index.html">Home</a></li>
-                    <li><a href="#" class="active-link">Projects</a></li>
+                    <li><a href="projects.html">Projects</a></li>
                     <li><a href="about.html">About Challenge</a></li>
-                    <li><a href="contributors.html">Contributors</a></li>
+                    <li><a href="contributors.html" class="active-link">Contributors</a></li>
                     <li><a href="structure.html">Structure</a></li>
                 </ul>
             </div>
@@ -155,6 +156,7 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="contributors.js"></script>
 </body>
 
 </html>

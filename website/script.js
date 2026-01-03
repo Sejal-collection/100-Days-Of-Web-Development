@@ -120,16 +120,19 @@ function renderProjects(category = 'All') {
         ? projects
         : projects.filter(p => p.level === category);
 
+    // Ensure sorted by day
+    filteredProjects.sort((a, b) => a.day - b.day);
+
     filteredProjects.forEach(project => {
         const card = document.createElement('div');
         card.className = 'project-card';
         card.innerHTML = `
             <div class="card-header">
-                <span class="badge ${project.level.toLowerCase()}">${project.level}</span>
                 <span class="day-number">Day ${project.day}</span>
+                <span class="badge">${project.level}</span>
             </div>
             <h3>${project.title}</h3>
-            <p>A ${project.level} level project.</p>
+            <p>Project for Day ${project.day}</p>
             <div class="card-actions">
                 <a href="${liveBaseUrl}${project.folder}/index.html" target="_blank" class="btn-small">Live Demo</a>
                 <a href="${repoBaseUrl}${project.folder}" target="_blank" class="btn-small outline">View Code</a>
